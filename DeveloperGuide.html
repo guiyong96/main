@@ -900,23 +900,19 @@ Note that XmlAdaptedTag class is removed as request has no tags.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>After request command is called, it</p>
+<p>After request command is called by the user, it gets parsed through a RequestListParser.</p>
 </li>
 <li>
-<p>Cons: Adds more code to Quantity Class</p>
-</li>
-</ul>
-</div>
+<p>The UI also prompts to EventCenter and logs out that the Request List has changed.</p>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Decreases quantity in the Book Class.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Does not need to edit Quantity Class.</p>
+<p>Request object is created and added to the model.</p>
 </li>
 <li>
-<p>Cons: Code becomes less cohesive.</p>
+<p>The storage then receives the request and returns message to model, which is then transferred to the UI.</p>
+</li>
+<li>
+<p>This notifies the user that the request is successfully submitted.</p>
 </li>
 </ul>
 </div>
@@ -2424,4 +2420,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-16 07:07:15 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-16 07:20:58 UTC</div></div></div></body></html>
