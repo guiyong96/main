@@ -35,8 +35,9 @@
 <li><a href="#request-feature">4.3. Request feature</a></li>
 <li><a href="#stock-feature">4.4. Stock feature</a></li>
 <li><a href="#password-protection">4.5. Password Protection</a></li>
-<li><a href="#logging">4.6. Logging</a></li>
-<li><a href="#Implementation-Configuration">4.7. Configuration</a></li>
+<li><a href="#command-prediction">4.6. Command Prediction</a></li>
+<li><a href="#logging">4.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">4.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">5. Documentation</a>
@@ -1035,14 +1036,50 @@ Note that XmlAdaptedTag class is removed as request has no tags.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">4.6. Logging</a></h3>
+<h3 id="command-prediction"><a class="link" href="#command-prediction">4.6. Command Prediction</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-6"><a class="link" href="#current-implementation-6">4.6.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>To maximize user friendliness, we have implemented predictive text which will appear
+familiar for phone users. BookInventory users may inadvertently misspell command words,
+e.g. lis (Expected command: list). This will now prompt a GUI log stating, "Did you mean,
+list?". To achieve this, we have utilized the Dice algorithm.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">4.6.2. Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-does-dice-algorithm-works"><a class="link" href="#aspect-how-does-dice-algorithm-works">Aspect: How does Dice Algorithm works?</a></h5>
+<div class="paragraph">
+<p>Dice&#8217;s coefficient measures the similarity between two sets. It can also be used to help measure how
+similar two strings are in terms of the number of common bigrams (a bigram is a pair of adjacent
+letters in the string).The Coefficient result of 1 indicates identical vectors (completely equal strings) as
+where a 0 equals orthogonal vectors (completely unequal strings).</p>
+</div>
+<div class="paragraph">
+<p>Formula: Dice&#8217;s coefficient = (2 * Common Terms) / (Number of terms in String1 + Number of terms in String2)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-how-well-does-this-algorithm-predicts"><a class="link" href="#aspect-how-well-does-this-algorithm-predicts">Aspect: How well does this algorithm predicts?</a></h5>
+<div class="paragraph">
+<p>Our current implementation sets Dice&#8217;s Coefficient to 0.5. Through our testing, this appears
+fine for most spelling errors. However, it will not predict too ridiculous errors because we
+do not wish to face a scenario where the suggestion offers another command word which is
+unintended by the user.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">4.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.7, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1073,7 +1110,7 @@ Note that XmlAdaptedTag class is removed as request has no tags.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.7. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">4.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2622,4 +2659,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-25 08:28:43 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-25 14:41:37 UTC</div></div></div></body></html>
