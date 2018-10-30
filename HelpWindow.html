@@ -15,22 +15,23 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-book-code-add-code">3.2. Adding a book: <code>add</code></a></li>
-<li><a href="#listing-all-books-code-list-code">3.3. Listing all books : <code>list</code></a></li>
-<li><a href="#locating-book-by-name-code-find-code">3.4. Locating book by Name: <code>find</code></a></li>
-<li><a href="#increase-book-quantity-ordered-more-books-code-stock-code">3.5. Increase Book Quantity (Ordered more books): <code>stock</code></a></li>
-<li><a href="#decrease-book-quantity-items-sold-code-sell-code">3.6. Decrease Book Quantity (Items Sold) : <code>sell</code></a></li>
-<li><a href="#check-inventory-code-check-code">3.7. Check Inventory: <code>check</code></a></li>
+<li><a href="#check-inventory-code-check-code">3.3. Check Inventory: <code>check</code></a></li>
+<li><a href="#listing-all-books-code-list-code">3.4. Listing all books : <code>list</code></a></li>
+<li><a href="#locating-book-by-name-code-find-code">3.5. Locating book by Name: <code>find</code></a></li>
+<li><a href="#increase-book-quantity-ordered-more-books-code-stock-code">3.6. Increase Book Quantity (Ordered more books): <code>stock</code></a></li>
+<li><a href="#decrease-book-quantity-items-sold-code-sell-code">3.7. Decrease Book Quantity (Items Sold) : <code>sell</code></a></li>
 <li><a href="#deleting-a-book-code-delete-code">3.8. Deleting a book : <code>delete</code></a></li>
-<li><a href="#deleting-a-request-code-deleterequest-code">3.9. Deleting a request : <code>deleterequest</code></a></li>
-<li><a href="#requesting-for-a-book-code-request-code">3.10. Requesting for a book : <code>request</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#display-account-data-code-stats-code">3.14. Display account data : <code>stats</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.15. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.16. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.17. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.18. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">3.9. Editing a person : <code>edit</code></a></li>
+<li><a href="#deleting-a-request-code-deleterequest-code">3.10. Deleting a request : <code>deleterequest</code></a></li>
+<li><a href="#requesting-for-a-book-code-request-code">3.11. Requesting for a book : <code>request</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#display-account-data-code-stats-code">3.15. Display account data : <code>stats</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.16. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.17. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.18. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -205,14 +206,32 @@ A book can have any number of tags (including 0)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-books-code-list-code"><a class="link" href="#listing-all-books-code-list-code">3.3. Listing all books : <code>list</code></a></h3>
+<h3 id="check-inventory-code-check-code"><a class="link" href="#check-inventory-code-check-code">3.3. Check Inventory: <code>check</code></a></h3>
+<div class="paragraph">
+<p>Finds books with quantity less than or equal to the given input value. List of books displayed in ascending order based on quantity left<br>
+Format: <code>check QUANTITY</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>check 4</code><br>
+Displays list of all books with quantity less than or equal to 4.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-books-code-list-code"><a class="link" href="#listing-all-books-code-list-code">3.4. Listing all books : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all books in the inventory list.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-book-by-name-code-find-code"><a class="link" href="#locating-book-by-name-code-find-code">3.4. Locating book by Name: <code>find</code></a></h3>
+<h3 id="locating-book-by-name-code-find-code"><a class="link" href="#locating-book-by-name-code-find-code">3.5. Locating book by Name: <code>find</code></a></h3>
 <div class="paragraph">
 <p>Finds books which names contain any of the given keywords from the inventory.<br>
 Format: <code>find KEYWORD [MORE KEYWORDS]</code></p>
@@ -257,7 +276,7 @@ Returns any books having names <code>Biology</code> or <code>Chemistry</code></p
 </div>
 </div>
 <div class="sect2">
-<h3 id="increase-book-quantity-ordered-more-books-code-stock-code"><a class="link" href="#increase-book-quantity-ordered-more-books-code-stock-code">3.5. Increase Book Quantity (Ordered more books): <code>stock</code></a></h3>
+<h3 id="increase-book-quantity-ordered-more-books-code-stock-code"><a class="link" href="#increase-book-quantity-ordered-more-books-code-stock-code">3.6. Increase Book Quantity (Ordered more books): <code>stock</code></a></h3>
 <div class="paragraph">
 <p>Increase an existing book quantity in the inventory list.<br>
 Format: <code>stock INDEX q/QUANTITY</code> OR <code>stock i/ISBN13 q/QUANTITY</code></p>
@@ -297,7 +316,7 @@ Increase the quantity available for the book with the corresponding ISBN13 by 5.
 </div>
 </div>
 <div class="sect2">
-<h3 id="decrease-book-quantity-items-sold-code-sell-code"><a class="link" href="#decrease-book-quantity-items-sold-code-sell-code">3.6. Decrease Book Quantity (Items Sold) : <code>sell</code></a></h3>
+<h3 id="decrease-book-quantity-items-sold-code-sell-code"><a class="link" href="#decrease-book-quantity-items-sold-code-sell-code">3.7. Decrease Book Quantity (Items Sold) : <code>sell</code></a></h3>
 <div class="paragraph">
 <p>Decrease an existing book quantity in the inventory list.<br>
 Format: <code>sell INDEX q/QUANTITY</code> OR <code>sell i/ISBN13 q/QUANTITY</code></p>
@@ -337,24 +356,6 @@ Decrease the quantity available for the book with the corresponding ISBN13 by 4.
 </div>
 </div>
 <div class="sect2">
-<h3 id="check-inventory-code-check-code"><a class="link" href="#check-inventory-code-check-code">3.7. Check Inventory: <code>check</code></a></h3>
-<div class="paragraph">
-<p>Finds books with quantity less than or equal to the given input value. List of books displayed in ascending order based on quantity left<br>
-Format: <code>check QUANTITY</code></p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>check 4</code><br>
-Displays list of all books with quantity less than or equal to 4.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
 <h3 id="deleting-a-book-code-delete-code"><a class="link" href="#deleting-a-book-code-delete-code">3.8. Deleting a book : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified book from the inventory list.<br>
@@ -378,10 +379,36 @@ Deletes the book with the corresponding iSBN13 from the inventory list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-request-code-deleterequest-code"><a class="link" href="#deleting-a-request-code-deleterequest-code">3.9. Deleting a request : <code>deleterequest</code></a></h3>
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.9. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified request from the request list. Strictly for bookstore owners.<br>
-Format: <code>delete INDEX</code></p>
+<p>Edits an existing book in the inventory book.<br>
+Format: <code>edit INDEX [n/NAME] [i/ISBN] [p/PRICE] [c/COST] [t/TAG]&#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the book at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed book list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+<li>
+<p>Quantity Field cannot be an input values. Use <code>stock</code> and <code>sell</code> to change Quantity Field</p>
+</li>
+<li>
+<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
+</li>
+<li>
+<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -389,14 +416,36 @@ Format: <code>delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 2</code><br>
+<p><code>edit 1 p/20 n/Chemistry</code><br>
+Edits the price and name of the 1st book to be <code>20</code> and <code>Chemistry</code> respectively.</p>
+</li>
+<li>
+<p><code>edit 2 c/30 t/</code><br>
+Edits the cost of the 2nd book to be <code>30</code> and clears all existing tags.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-request-code-deleterequest-code"><a class="link" href="#deleting-a-request-code-deleterequest-code">3.10. Deleting a request : <code>deleterequest</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified request from the request list. Strictly for bookstore owners.<br>
+Format: <code>deleterequest INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deleterequest 2</code><br>
 Deletes the 2nd request in the displayed request list.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="requesting-for-a-book-code-request-code"><a class="link" href="#requesting-for-a-book-code-request-code">3.10. Requesting for a book : <code>request</code></a></h3>
+<h3 id="requesting-for-a-book-code-request-code"><a class="link" href="#requesting-for-a-book-code-request-code">3.11. Requesting for a book : <code>request</code></a></h3>
 <div class="paragraph">
 <p>Requests to purchase a book.<br>
 Format: <code>request i/ISBN13 e/EMAIL q/QUANTITY</code></p>
@@ -425,7 +474,7 @@ Requests for 5 same books with the corresponding iSBN13 with requester&#8217;s e
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -446,7 +495,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the inventory book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -491,7 +540,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -523,35 +572,35 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="display-account-data-code-stats-code"><a class="link" href="#display-account-data-code-stats-code">3.14. Display account data : <code>stats</code></a></h3>
+<h3 id="display-account-data-code-stats-code"><a class="link" href="#display-account-data-code-stats-code">3.15. Display account data : <code>stats</code></a></h3>
 <div class="paragraph">
 <p>Displays the total revenue made.<br>
 Format: <code>stats</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.15. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.16. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the BookInventory.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.16. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.17. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.17. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.18. Saving the data</a></h3>
 <div class="paragraph">
 <p>BookInventory data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.18. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.19. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -589,6 +638,10 @@ e.g. <code>add n/Harry Potter i/978-2-12-345680-3 p/60.70 q/100 c/90 t/difficult
 e.g. <code>find biology chemistry</code></p>
 </li>
 <li>
+<p><strong>Edit</strong> : <code>edit INDEX n/NAME i/ISBN13 p/PRICE c/COST [t/TAG]&#8230;&#8203;</code><br>
+e.g. <code>edit INDEX n/Chemistry p/30.00</code></p>
+</li>
+<li>
 <p><strong>Stock</strong> : <code>stock INDEX q/QUANTITY</code> OR <code>stock i/ISBN13 q/QUANTITY</code><br>
 e.g. <code>stock 1 q/8</code> OR <code>stock i/978-2-12-345680-3 q/8</code></p>
 </li>
@@ -616,7 +669,7 @@ e.g. <code>delete 1</code> OR <code>delete i/978-2-12-345680-3</code></p>
 </li>
 <li>
 <p><strong>DeleteRequest</strong> : <code>deleterequest INDEX</code><br>
-e.g. <code>delete 1</code></p>
+e.g. <code>deleterequest 1</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list</code></p>
@@ -639,4 +692,4 @@ e.g. <code>delete 1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 16:27:23 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-10-30 17:47:40 UTC</div></div></div></body></html>
