@@ -192,10 +192,24 @@ Format: <code>add n/NAME i/ISBN13 p/PRICE q/QUANTITY (c/COST) [t/TAG]&#8230;&#82
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-A book can have any number of tags (including 0)
+A book can have any number of tags (including 0)<br>
 </td>
 </tr>
 </table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>ISBNs are calculated using a specific mathematical formula and include a check digit to validate the number. Random invalid 10 to 13 digit values will produce an error</p>
+</li>
+<li>
+<p>ISBN field allows input with and without dashes</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -203,10 +217,10 @@ A book can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/Harry Potter i/978-2-12-345680-3 p/60.70 q/100 c/30.90 t/difficult</code></p>
+<p><code>add n/Harry Potter i/9781408855713 p/60.70 q/100 c/30.90 t/difficult</code></p>
 </li>
 <li>
-<p><code>add n/Lord of the Rings i/978-2-12-345123-3 p/59.90 q/271 c/20.99</code></p>
+<p><code>add n/Lord of the Rings i/9789655171990 p/59.90 q/271 c/20.99</code></p>
 </li>
 </ul>
 </div>
@@ -256,10 +270,10 @@ Format: <code>find KEYWORD [MORE KEYWORDS]</code></p>
 <p>Only the name is searched.</p>
 </li>
 <li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+<p>Substring of Names will be matched e.g. <code>Han</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>bOOKS matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Books matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
 </li>
 </ul>
 </div>
@@ -295,7 +309,7 @@ Format: <code>stock INDEX q/QUANTITY</code> OR <code>stock i/ISBN13 q/QUANTITY</
 <p>Increase the stock at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed inventory list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Increase the quantity of the book with the respective ISBN. ISBN is <strong>unique</strong> to each book</p>
+<p>Increase the quantity of the book with the respective ISBN. ISBN is <strong>unique</strong> to each book. Quantity <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
 <p>Existing quantity will be increase by the input value.</p>
@@ -698,4 +712,4 @@ e.g. <code>deleterequest 1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-02 08:39:12 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-03 11:02:30 UTC</div></div></div></body></html>
