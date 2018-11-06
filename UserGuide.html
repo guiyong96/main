@@ -19,9 +19,9 @@
 <li><a href="#listing-all-books-code-list-code">3.4. Listing all books : <code>list</code></a></li>
 <li><a href="#locating-book-by-name-code-find-code">3.5. Locating book by Name: <code>find</code></a></li>
 <li><a href="#increase-book-quantity-ordered-more-books-code-stock-code">3.6. Increase Book Quantity (Ordered more books): <code>stock</code></a></li>
-<li><a href="#decrease-book-quantity-books-sold-code-sell-code">3.7. Decrease Book Quantity (Books Sold) : <code>sell</code></a></li>
+<li><a href="#decrease-book-quantity-items-sold-code-sell-code">3.7. Decrease Book Quantity (Items Sold) : <code>sell</code></a></li>
 <li><a href="#deleting-a-book-code-delete-code">3.8. Deleting a book : <code>delete</code></a></li>
-<li><a href="#editing-a-book-code-edit-code">3.9. Editing a book : <code>edit</code></a></li>
+<li><a href="#editing-a-person-code-edit-code">3.9. Editing a person : <code>edit</code></a></li>
 <li><a href="#deleting-a-request-code-deleterequest-code">3.10. Deleting a request : <code>deleterequest</code></a></li>
 <li><a href="#requesting-for-a-book-code-request-code">3.11. Requesting for a book : <code>request</code></a></li>
 <li><a href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></li>
@@ -207,12 +207,6 @@ A book can have any number of tags (including 0)<br>
 <li>
 <p>ISBN field allows input with and without dashes</p>
 </li>
-<li>
-<p>PRICE field is the selling price of the book</p>
-</li>
-<li>
-<p>COST field is the cost price of the book</p>
-</li>
 </ul>
 </div>
 </div>
@@ -236,17 +230,6 @@ A book can have any number of tags (including 0)<br>
 <div class="paragraph">
 <p>Finds books with quantity less than or equal to the given input value. List of books displayed in ascending order based on quantity left<br>
 Format: <code>check QUANTITY</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>QUANTITY only accepts input between 0 and 999, inclusive</p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -278,16 +261,16 @@ Format: <code>find KEYWORD [MORE KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>biology</code> will match <code>Biology</code></p>
+<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Chemistry Biology</code> will match <code>Biology Chemistry</code></p>
+<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
 </li>
 <li>
 <p>Only the name is searched.</p>
 </li>
 <li>
-<p>Substrings of names will be matched e.g. <code>Chem</code> will match <code>Chemistry</code></p>
+<p>Substring of Names will be matched e.g. <code>Han</code> will match <code>Hans</code></p>
 </li>
 <li>
 <p>Books matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
@@ -353,7 +336,7 @@ Increase the quantity available for the book with the corresponding ISBN13 by 5.
 </div>
 </div>
 <div class="sect2">
-<h3 id="decrease-book-quantity-books-sold-code-sell-code"><a class="link" href="#decrease-book-quantity-books-sold-code-sell-code">3.7. Decrease Book Quantity (Books Sold) : <code>sell</code></a></h3>
+<h3 id="decrease-book-quantity-items-sold-code-sell-code"><a class="link" href="#decrease-book-quantity-items-sold-code-sell-code">3.7. Decrease Book Quantity (Items Sold) : <code>sell</code></a></h3>
 <div class="paragraph">
 <p>Decrease an existing book quantity in the inventory list.<br>
 Format: <code>sell INDEX q/QUANTITY</code> OR <code>sell i/ISBN13 q/QUANTITY</code></p>
@@ -416,7 +399,7 @@ Deletes the book with the corresponding iSBN13 from the inventory list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-book-code-edit-code"><a class="link" href="#editing-a-book-code-edit-code">3.9. Editing a book : <code>edit</code></a></h3>
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.9. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing book in the inventory book.<br>
 Format: <code>edit INDEX [n/NAME] [i/ISBN] [p/PRICE] [c/COST] [t/TAG]&#8230;&#8203;</code></p>
@@ -493,9 +476,6 @@ Format: <code>request i/ISBN13 e/EMAIL q/QUANTITY</code></p>
 <ul>
 <li>
 <p>The email is for owner to confirm the order with requester.</p>
-</li>
-<li>
-<p>Isbn does not need to exist in the inventory but needs to be valid for owners to get the book</p>
 </li>
 </ul>
 </div>
@@ -732,4 +712,4 @@ e.g. <code>deleterequest 1</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 14:55:36 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 17:36:02 UTC</div></div></div></body></html>

@@ -10,7 +10,7 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Book Inventory is a desktop application cater for small and medium bookstore owners. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p>BookInventory is a desktop application used for small to medium book owners. It can be used to track activities such as revenue and stock of the books. The user mainly interacts with the application using Command Line Interface (CLI), and it also has a built-in GUI created with JavaFX. The main code is written in Java and contains approximately 10,000 Lines of Code (LoC).</p>
 </div>
 </div>
 </div>
@@ -20,26 +20,23 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>statistic feature</strong></p>
+<p><strong>Major enhancement</strong>: added a password field for security</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to view the monthly performance of the store through key financial datas like revenue, expense and inventory.</p>
+<p>What it does: allow users to key in a password before using the application. This is to prevent unauthorized users from using the application.</p>
 </li>
 <li>
-<p>Justification: This feature helps value-add the product significantly because financial datas are tedious to record and can be prone to human error. With the help of automation, financial datas are more reliable and accurate, further owners can access them swiftly.</p>
+<p>Justification: This is to prevent unauthorized users from using the application because they might temper with the data.</p>
 </li>
 <li>
-<p>Highlights: This enhancement requires a singleton class StatisticCenter which interacts with most of the existing commands and possibly future commands.</p>
-</li>
-<li>
-<p>Credits: Singleton implementation - <a href="https://medium.com/exploring-code/how-to-make-the-perfect-singleton-de6b951dfdb0" class="bare">https://medium.com/exploring-code/how-to-make-the-perfect-singleton-de6b951dfdb0</a></p>
+<p>Highlights: The code is written before the application starts, this is to prevent any unnecessary load-up from the application, freeing space and data for the user. The implementation was challenging at first as you require a basic knowledge of JavaFX.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a stock command that allows the user to stock books.</p>
+<p><strong>Minor enhancement</strong>: change regular expressions (regex) in the code</p>
 </li>
 <li>
 <p><strong>Code contributed</strong>: [<a href="https://github.com">Functional code</a>] [<a href="https://github.com">Test code</a>]</p>
@@ -114,23 +111,22 @@
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="increase-book-quantity-ordered-more-books-code-stock-code"><a class="link" href="#increase-book-quantity-ordered-more-books-code-stock-code">Increase Book Quantity (Ordered more books): <code>stock</code></a></h3>
-<div class="paragraph">
-<p>Increase an existing book quantity in the inventory list.<br>
-Format: <code>stock INDEX q/QUANTITY</code> OR <code>stock i/ISBN13 q/QUANTITY</code></p>
-</div>
+<h3 id="key-in-password"><a class="link" href="#key-in-password">Key-in password</a></h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Increase the stock at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed inventory list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>A password will be required by the application to use it.</p>
 </li>
 <li>
-<p>Increase the quantity of the book with the respective ISBN. ISBN is <strong>unique</strong> to each book</p>
+<p>If you do not know the password, please contact us using github directly.</p>
 </li>
 <li>
-<p>Existing quantity will be increase by the input value.</p>
+<p>For the sake of this early development of the program, the password for the admin: "owner"; student: "password"; accountant: "accountant".</p>
+</li>
+<li>
+<p>Different roles have different sets of permission ie commands.</p>
 </li>
 </ul>
 </div>
@@ -168,53 +164,5 @@ Increase the quantity available for the book with the corresponding ISBN13 by 5.
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="stock-feature"><a class="link" href="#stock-feature">Stock feature</a></h3>
-<div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">Current implementation</a></h4>
-<div class="paragraph">
-<p>The sell command utilises both the <code>Model</code> and <code>Logic</code> component to fulfil its function.</p>
-</div>
-<div class="paragraph">
-<p>The stock operation is similar to the sell operation, refer to sell command for sequence diagram:</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-how-stock-command-is-implemented"><a class="link" href="#aspect-how-stock-command-is-implemented">Aspect: How stock command is implemented</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Increases quantity in the Quantity Class.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Code is more cohesive.</p>
-</li>
-<li>
-<p>Cons: Adds more code to Quantity Class.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Replace quantity in the Book Class.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Does not need to edit Quantity Class.</p>
-</li>
-<li>
-<p>Cons: Code becomes less cohesive.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-06 17:36:02 UTC</div></div></div></body></html>
