@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Kenneth Chua Song Jye - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level3">AB-3</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">AddressBook-Level4</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level4"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Kenneth Chua Song Jye - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-book-inventory"><a class="link" href="#project-book-inventory">PROJECT: Book Inventory</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>BookInventory is a desktop application catered primarily for store owners to manage their book supplies. It includes many basic and advance functions such as adding, deleting and requesting books from the inventory. The user interacts with it using a CLI, and it has a GUI created with JavaFX. This portfolio demonstrates my ability to write documentation for both User Guide and Developer Guide.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to conveniently stock, sell and delete books</strong> from the inventory</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows user to execute <code>stock</code>/<code>sell</code>/<code>delete</code> commands by selecting the target book either from a list or with their unique ISBN. To facilitate the typing of ISBN, users can cycle through the existing ISBNs in the inventory using their incompleted ISBN entry by pressing <kbd>Tab</kbd>.</p>
+</li>
+<li>
+<p>Justification: These features improve the product significantly because stocking up and selling of books are done daily which make them the core functions of the app. As such, the app should provide a convenient way to address them.</p>
+</li>
+<li>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+</li>
+<li>
+<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: added <strong>the ability to display a list of books less than or equal to a given quantity</strong> using the <code>check</code> command.</p>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nuscs2113-ay1819s1.github.io/dashboard/#=undefined&amp;search=kennethcsj">Functional/Test code</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed releases <code>v1.1</code> - <code>v1.3</code> (4 releases) on GitHub</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Additional enhancement to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added a new cost field to the <code>add</code> command</p>
+</li>
+<li>
+<p>Updated the identifier for books to ISBN</p>
+</li>
+<li>
+<p>Updated the <code>edit</code> command to prevent edits to <code>quantity</code></p>
+</li>
+<li>
+<p>Updated <code>find</code> command to allow substrings as an input to find for books</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Updated the User Guide to be a representation of the app</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+</li>
+<li>
+<p>Contributed to forum discussions (examples:  <a href="https://github.com/nusCS2113-AY1819S1/forum/issues/58">1</a>)</p>
+</li>
+<li>
+<p>Some parts of the <kbd>Tab</kbd> feature I added was adopted by several other class mates</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>This part shows the sections that I contributed to the User Guide. My ability to write documentation targeting end-users are showcased here.</em></p>
+</div>
+<div class="sect2">
+<h3 id="check-inventory-code-check-code"><a class="link" href="#check-inventory-code-check-code">Check Inventory: <code>check</code></a></h3>
+<div class="paragraph">
+<p>Finds books with quantity less than or equal to the given input value. List of books displayed in ascending order based on quantity left<br>
+Format: <code>check QUANTITY</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>QUANTITY only accepts input between 0 and 999, inclusive</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>check 4</code><br>
+Displays list of all books with quantity less than or equal to 4.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="decrease-book-quantity-books-sold-code-sell-code"><a class="link" href="#decrease-book-quantity-books-sold-code-sell-code">Decrease Book Quantity (Books Sold) : <code>sell</code></a></h3>
+<div class="paragraph">
+<p>Decrease an existing book quantity in the inventory list.<br>
+Format: <code>sell INDEX q/QUANTITY</code> OR <code>sell i/ISBN13 q/QUANTITY</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Decrease the quantity at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed inventory list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Decrease the quantity of the book with the respective ISBN. ISBN is <strong>unique</strong> to each book</p>
+</li>
+<li>
+<p>Existing quantity will decrease by the input value.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>sell 1 q/5</code><br>
+Decrease the quantity available of the 1st book by 5.</p>
+</li>
+<li>
+<p><code>sell i/978-2-12-345680-3 q/4</code><br>
+Decrease the quantity available for the book with the corresponding ISBN13 by 4.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>This part shows the sections that I contributed to the Developer Guide. My ability to write technical documentation and the technical depth of my contributions are showcased here.</em></p>
+</div>
+<div class="sect2">
+<h3 id="sell-feature"><a class="link" href="#sell-feature">Sell feature</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current implementation</a></h4>
+<div class="paragraph">
+<p>The sell command utilises both the <code>Model</code> and <code>Logic</code> component to fulfil its function.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the sell operation is implemented</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/SellSequenceDiagram.png" alt="SellSequenceDiagram" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>After SoldBook is created, the inventory book will be updated through <code>Model#updateBook()</code>, <code>Model#updateFilteredBookList()</code> and <code>Model#commitBookInventory()</code> to store the latest quantity of books left.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-sell-command-is-implemented"><a class="link" href="#aspect-how-sell-command-is-implemented">Aspect: How sell command is implemented</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Decreases quantity in the Quantity Class.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Code is more cohesive.</p>
+</li>
+<li>
+<p>Cons: Adds more code to Quantity Class</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Decreases quantity in the Book Class.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Does not need to edit Quantity Class.</p>
+</li>
+<li>
+<p>Cons: Code becomes less cohesive.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-11-07 05:47:23 UTC</div></div></div></body></html>
